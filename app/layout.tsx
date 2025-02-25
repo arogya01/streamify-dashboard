@@ -11,8 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Streamify Analytics Dashboard",
-  description: "Analytics dashboard for Streamify music streaming service",
-    generator: 'v0.dev'
+  description: "Analytics dashboard for Streamify music streaming service",    
 }
 
 export default function RootLayout({
@@ -25,7 +24,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex h-screen bg-background">
-            <Sidebar />
             <main className="flex-1 overflow-x-hidden overflow-y-auto">
               <div className="flex justify-between items-center p-4 border-b">
                 <DateRangePicker />
