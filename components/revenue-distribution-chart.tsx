@@ -2,12 +2,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts"
+import { mockData } from "@/mockData"
 
-const data = [
-  { name: "Subscriptions", value: 400000 },
-  { name: "Ads", value: 100000 },
-]
-
+const data = mockData.revenueDistribution;
 const COLORS = ["#0088FE", "#00C49F"]
 
 export function RevenueDistributionChart() {

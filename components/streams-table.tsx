@@ -8,17 +8,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { ArrowUpDown } from "lucide-react"
+import { mockData } from "@/mockData"
 
-const initialData = [
-  { id: 1, songName: "Song 1", artist: "Artist 1", dateStreamed: "2023-05-01", streamCount: 1000, userId: "user123" },
-  { id: 2, songName: "Song 2", artist: "Artist 2", dateStreamed: "2023-05-02", streamCount: 1500, userId: "user456" },
-  { id: 3, songName: "Song 3", artist: "Artist 3", dateStreamed: "2023-05-03", streamCount: 800, userId: "user789" },
-  { id: 4, songName: "Song 4", artist: "Artist 4", dateStreamed: "2023-05-04", streamCount: 2000, userId: "user101" },
-  { id: 5, songName: "Song 5", artist: "Artist 5", dateStreamed: "2023-05-05", streamCount: 1200, userId: "user202" },
-]
 
 export function StreamsTable() {
-  const [data, setData] = useState(initialData)
+  const [data, setData] = useState(mockData.streamsTable)
   const [sortColumn, setSortColumn] = useState("")
   const [sortDirection, setSortDirection] = useState("asc")
   const [filterText, setFilterText] = useState("")
@@ -42,7 +36,7 @@ export function StreamsTable() {
   const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
     const filterValue = event.target.value.toLowerCase()
     setFilterText(filterValue)
-    const filteredData = initialData.filter(
+    const filteredData = mockData.streamsTable.filter(
       (item) => item.songName.toLowerCase().includes(filterValue) || item.artist.toLowerCase().includes(filterValue),
     )
     setData(filteredData)

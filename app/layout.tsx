@@ -2,10 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Sidebar } from "@/components/sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { DateRangePicker } from "@/components/date-range-picker"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,7 +24,6 @@ export default function RootLayout({
           <div className="flex h-screen bg-background">
             <main className="flex-1 overflow-x-hidden overflow-y-auto">
               <div className="flex justify-between items-center p-4 border-b">
-                <DateRangePicker />
                 <ThemeToggle />
               </div>
               {children}
