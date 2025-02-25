@@ -1,7 +1,5 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -54,31 +52,36 @@ export function StreamsTable() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>
-                <Button variant="ghost" onClick={() => handleSort("songName")}>
+              <TableHead className="w-[200px]">
+                <Button variant="ghost" className="w-full justify-start p-0 font-medium" onClick={() => handleSort("songName")}>
                   Song Name
                   <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead>
-                <Button variant="ghost" onClick={() => handleSort("artist")}>
+              <TableHead className="w-[200px]">
+                <Button variant="ghost" className="w-full justify-start p-0 font-medium" onClick={() => handleSort("artist")}>
                   Artist
                   <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead>
-                <Button variant="ghost" onClick={() => handleSort("dateStreamed")}>
+              <TableHead className="w-[200px]">
+                <Button variant="ghost" className="w-full justify-start p-0 font-medium" onClick={() => handleSort("dateStreamed")}>
                   Date Streamed
                   <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead>
-                <Button variant="ghost" onClick={() => handleSort("streamCount")}>
+              <TableHead className="w-[200px]">
+                <Button variant="ghost" className="w-full justify-start p-0 font-medium" onClick={() => handleSort("streamCount")}>
                   Stream Count
                   <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead>User ID</TableHead>
+              <TableHead className="w-[200px]">
+                <Button variant="ghost" className="w-full justify-start p-0 font-medium" onClick={() => handleSort("userId")}>
+                  User ID
+                  <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
